@@ -1,0 +1,48 @@
+{
+  "type" : "record",
+  "name" : "Transactions",
+  "namespace" : "metro.trans.avro",
+  "fields" : [ {
+    "name" : "businessKey",
+    "type" : {
+      "type" : "record",
+      "name" : "BusinessKey",
+      "fields" : [ {
+        "name" : "TxId",
+        "type" : "string"
+      } ]
+    }
+  }, {
+    "name" : "metadata",
+    "type" : {
+      "type" : "record",
+      "name" : "MetaData",
+      "fields" : [ {
+        "name" : "msgType",
+        "type" : "string"
+      }, {
+        "name" : "mdInsertDtTm",
+        "type" : "string"
+      } ]
+    }
+  }, {
+    "name" : "accountId",
+    "type" : "string"
+  }, {
+    "name" : "tranactionId",
+    "type" : "string"
+  }, {
+    "name" : "dataPayLoad",
+    "type" : {
+      "type" : "record",
+      "name" : "Details",
+      "fields" : [ {
+        "name" : "date",
+        "type" : "string"
+      }, {
+        "name" : "amount",
+        "type" : "double"
+      } ]
+    }
+  } ]
+}
